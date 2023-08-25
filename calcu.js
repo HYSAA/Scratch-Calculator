@@ -1,6 +1,5 @@
-let buttonEl= document.querySelectorAll("buttons")
+let buttonEl= document.querySelectorAll("button")
 let inputID= document.getElementById("result")
-
 
 for(let i=0; i < buttonEl.length;i++)
 {
@@ -15,20 +14,20 @@ if(buttonValue==="C"){
     calculateResult()
 }
 else{
-appendValue()
+appendValue(buttonValue)
 }
 });
 
 }
 
 const clearResult= () =>{
- inputID.textContent=""
+ inputID.value=""
 }
 
 const calculateResult= () =>{
-inputID.value=eval(inputID.eval)
+inputID.value=eval(inputID.value)
 
 }
-const appendValue=(buttonValue) => {
-    inputID.value+= buttonValue
+function appendValue(buttonValue){
+    inputID.value+=buttonValue;
 }
